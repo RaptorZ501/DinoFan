@@ -1,12 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@216&display=swap");
-/*Grid*/
+.header, .arian, .footer {
+  background-color: #999999;
+  border-radius: 1%;
+  margin: 5px;
+  color: #157e15;
+  opacity: 0.9;
+}
+
+/*Grid Index*/
 .index {
   display: -ms-inline-grid;
   display: inline-grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  -ms-grid-rows: 1fr 1fr 2fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 2fr 1fr 1fr;
+  -ms-grid-columns: 200px 1fr 1fr 1fr 200px;
+      grid-template-columns: 200px 1fr 1fr 1fr 200px;
+  -ms-grid-rows: 180px 1fr 2fr 1fr 150px;
+      grid-template-rows: 180px 1fr 2fr 1fr 150px;
       grid-template-areas: "header header header header header" ". nav nav nav ." ". nav nav nav ." ". nav nav nav ." "footer footer footer footer footer";
 }
 
@@ -22,6 +30,12 @@
   }
 }
 
+.index {
+  width: 100%;
+  height: 100%;
+}
+
+/*Grid Presentation*/
 .presentation {
   display: -ms-inline-grid;
   display: inline-grid;
@@ -68,6 +82,12 @@
   }
 }
 
+.presentation {
+  width: 100%;
+  height: 100%;
+}
+
+/*Grid Event*/
 .event {
   display: -ms-inline-grid;
   display: inline-grid;
@@ -114,61 +134,98 @@
   }
 }
 
-/*/Grid*/
-.index {
-  width: 100%;
-  height: 100%;
-}
-
-.presentation {
-  width: 100%;
-  height: 100%;
-}
-
 .event {
   width: 100%;
   height: 100%;
 }
 
 /*/Grid*/
-html {
-  font-size: 15px;
-}
-
+/*Multiple*/
+html,
 body {
+  font-size: 17px;
   width: 100%;
-  height: 100vh;
-  font-family: 'Roboto Slab', serif;
+  height: 100%;
+  font-family: 'Roboto Slab, serif';
 }
 
-.gray {
-  background-color: #999999;
-  border-radius: 1%;
-  margin: 5px;
-  color: #157e15;
-  opacity: 0.9;
+h1,
+h2,
+h3,
+h4,
+caption,
+.aside2 {
+  font-weight: bold;
 }
 
+.navli,
+.main,
+h1,
+h2,
+h3,
+h4,
+caption,
+.footer {
+  text-align: center;
+}
+
+.navindex,
+.lnav,
+.arian,
+.footer,
+.header {
+  border: 2px solid black;
+}
+
+.lnavindex,
+.lnav,
+.liens {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #199319;
+}
+
+.arian :hover,
+.navli :hover,
+.link-light :hover {
+  color: black;
+}
+
+.object,
+.team,
+.visite,
+.reunion,
+caption,
+.lnavindex :not(visited),
+.lnav :not(visited),
+.table,
+.aside2 {
+  color: white;
+}
+
+/*/Multiple*/
 /*Header*/
 .header {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: header;
-  border: 2px solid black;
   grid-column: span;
   grid-row: span;
   border-radius: 10px 10px 0 0;
+  margin: 1px;
+  padding: auto;
 }
 
 /*/Header*/
 /*title and text*/
 h1 {
-  text-align: center;
   font-size: 5.5rem;
-  margin-left: 10px;
-  font-weight: bold;
-  padding-top: 25px;
+  margin: 15px 0 0 0;
 }
 
 h2,
@@ -176,17 +233,8 @@ h3 {
   font-size: 2rem;
 }
 
-h2,
-h3,
-h4,
-caption {
-  font-weight: bold;
-}
-
 caption {
   font-size: 4rem;
-  color: white;
-  text-align: center;
   caption-side: top;
 }
 
@@ -217,25 +265,17 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border: 2px solid black;
   grid-column: span;
   grid-row: span;
-  margin-bottom: 5px;
+  padding: 60px;
+  margin: 5px;
 }
 
 .lnavindex {
-  list-style: none;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 50px;
-  padding: 10px 40px 10px 10px;
   border-radius: 10px;
   border: 5px solid black;
-  background-color: #199319;
   opacity: 0.9;
+  padding: 0 50px 0 50px;
 }
 
 .nav {
@@ -255,39 +295,15 @@ p {
 }
 
 .lnav {
-  list-style: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  margin: 2px;
-  padding-right: 30px;
   border-radius: 10px 0 0 10px;
-  border: 2px solid black;
-  background-color: #199319;
 }
 
 .active {
   color: #0d4e0d;
-}
-
-.navli :hover {
-  padding: 10px;
-}
-
-.arian :hover,
-.navli :hover,
-.link-light :hover {
-  color: black;
-}
-
-.lnavindex :not(visited) .lnav :not(visited) {
-  color: white;
 }
 
 ul li a {
@@ -301,15 +317,12 @@ ul li a {
   grid-area: arian;
   grid-column: span;
   grid-row: span;
-  margin: 0 5px 0 5px;
-  border: 2px solid black;
   border-radius: 0 0 10px 10px;
-  padding: 2px 0 2px 5px;
 }
 
 .logo-nav {
-  position: relative;
-  left: 30px;
+  height: 60px;
+  width: 50px;
 }
 
 .bg-body {
@@ -320,7 +333,8 @@ ul li a {
 
 .bg-image {
   background: url("../images/narciso-arellano-XGs1Dwk9V9M-unsplash.jpg") fixed no-repeat center;
-  background-size: 60% 70%;
+  background-size: 85% 85%;
+  background-position-y: 180px;
   background-color: #126812;
 }
 
@@ -341,14 +355,9 @@ ul li a {
 .visite,
 .reunion {
   background-color: #157e15;
-  color: white;
   margin-right: 5px;
   padding-bottom: 1px;
   opacity: 0.9;
-}
-
-.object {
-  margin-top: 5px;
 }
 
 p {
@@ -361,7 +370,7 @@ p {
 }
 
 .btn-success {
-  background-color: #04ac04;
+  background-color: #007700;
 }
 
 .main {
@@ -372,7 +381,6 @@ p {
   grid-area: main;
   grid-column: span;
   grid-row: span;
-  text-align: center;
 }
 
 .main-event {
@@ -396,7 +404,6 @@ p {
 
 .table {
   background-color: ligthen(#0e520e, 8%);
-  color: white;
   margin-right: 5px;
   padding-bottom: 1px;
 }
@@ -410,29 +417,13 @@ p {
   grid-area: aside;
   grid-column: span;
   grid-row: span;
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   padding: 30px;
-  background-color: #157e15;
   margin: 2px 5px 2px 0;
   opacity: 0.9;
 }
 
+.aside,
 .aside2 {
-  font-weight: bold;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-item-align: center;
-      align-self: center;
-  color: white;
-}
-
-.aliens {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -457,18 +448,14 @@ p {
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: footer;
-  padding-top: 50px;
-  padding-bottom: 50px;
   margin: 0px 5px 2px 5px;
-  border: 2px solid black;
-  text-align: center;
   grid-column: span;
   grid-row: span;
 }
 
 /*/footer*/
 /*responsive*/
-/*responsive max 321px*/
+/*max 321px*/
 @media screen and (max-width: 321px) {
   .presentation {
     display: -ms-inline-grid;
