@@ -18,18 +18,6 @@
       grid-template-areas: "header header header header header" ". nav nav nav ." ". nav nav nav ." ". nav nav nav ." "footer footer footer footer footer";
 }
 
-@media screen and (max-width: 321px) {
-  .index {
-    display: -ms-inline-grid;
-    display: inline-grid;
-    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    -ms-grid-rows: 1fr 1fr 2fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 2fr 1fr 1fr;
-        grid-template-areas: "header header header header header" ". nav nav nav ." ". nav nav nav ." ". nav nav nav ." "footer footer footer footer footer";
-  }
-}
-
 .index {
   width: 100%;
   height: 100%;
@@ -44,30 +32,6 @@
   -ms-grid-rows: 180px 35px 455px 150px 150px;
       grid-template-rows: 180px 35px 455px 150px 150px;
       grid-template-areas: "header header header header" "arian arian arian arian" "nav main main main" "nav aside aside aside" "footer footer footer footer";
-}
-
-@media screen and (max-width: 321px) {
-  .presentation {
-    display: -ms-inline-grid;
-    display: inline-grid;
-    -ms-grid-columns: 0.2fr 1fr 1fr 1fr;
-        grid-template-columns: 0.2fr 1fr 1fr 1fr;
-    -ms-grid-rows: 1fr 1fr 0.5fr 1fr;
-        grid-template-rows: 1fr 1fr 0.5fr 1fr;
-        grid-template-areas: "nav header header header"     "main main main main" "aside aside aside aside" "footer footer footer footer";
-  }
-}
-
-@media screen and (min-width: 321px) and (max-width: 550px) {
-  .presentation {
-    display: -ms-inline-grid;
-    display: inline-grid;
-    -ms-grid-columns: 0.2fr 1fr 1fr 1fr;
-        grid-template-columns: 0.2fr 1fr 1fr 1fr;
-    -ms-grid-rows: 1fr 1fr 0.7fr 1fr;
-        grid-template-rows: 1fr 1fr 0.7fr 1fr;
-        grid-template-areas: "nav header header header"     "main main main main" "aside aside aside aside" "footer footer footer footer";
-  }
 }
 
 @media screen and (min-width: 550px) and (max-width: 850px) {
@@ -96,30 +60,6 @@
   -ms-grid-rows: 180px 35px 455px 1fr 150px 150px;
       grid-template-rows: 180px 35px 455px 1fr 150px 150px;
       grid-template-areas: "header header header header" "arian arian arian arian" "nav main main main" "nav main main main" "nav aside aside aside" "footer footer footer footer";
-}
-
-@media screen and (max-width: 321px) {
-  .event {
-    display: -ms-inline-grid;
-    display: inline-grid;
-    -ms-grid-columns: 100px 1fr 1fr 1fr;
-        grid-template-columns: 100px 1fr 1fr 1fr;
-    -ms-grid-rows: 120px 100px 300px 150px 120px;
-        grid-template-rows: 120px 100px 300px 150px 120px;
-        grid-template-areas: "nav header header header" "main main main main" "main main main main" "aside aside aside aside" "footer footer footer footer";
-  }
-}
-
-@media screen and (min-width: 321px) and (max-width: 550px) {
-  .event {
-    display: -ms-inline-grid;
-    display: inline-grid;
-    -ms-grid-columns: 1fr 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    -ms-grid-rows: 0.33fr 0.1fr 1fr 0.3fr 0.3fr;
-        grid-template-rows: 0.33fr 0.1fr 1fr 0.3fr 0.3fr;
-        grid-template-areas: "nav header header header" "main main main main" "main main main main" "aside aside aside aside" "footer footer footer footer";
-  }
 }
 
 @media screen and (min-width: 550px) and (max-width: 850px) {
@@ -228,7 +168,8 @@ h1 {
 }
 
 h2,
-h3 {
+h3,
+h4 {
   font-size: 2rem;
 }
 
@@ -465,6 +406,96 @@ p {
 /*responsive*/
 /*max 321px*/
 @media screen and (max-width: 321px) {
+  /*Page index*/
+  .index {
+    -ms-grid-columns: 100px 50px 50px 100px;
+        grid-template-columns: 100px 50px 50px 100px;
+    -ms-grid-rows: 150px 250px 300px 100px 130px;
+        grid-template-rows: 150px 250px 300px 100px 130px;
+        grid-template-areas: "header header header header" ". nav nav ." ". nav nav ." ". nav nav ." "footer footer footer footer";
+  }
+  .index .lnavindex {
+    padding: 80px;
+    margin: 0 30px 0 0;
+    font-size: 2rem;
+  }
+  .index .footer {
+    padding: 5px 0 5px 0;
+    margin: 0 2px 5px 0;
+    font-size: 3rem;
+    border-radius: 10px;
+  }
+  /*Page presentation*/
+  .presentation {
+    -ms-grid-columns: 120px 50px 50px 80px;
+        grid-template-columns: 120px 50px 50px 80px;
+    -ms-grid-rows: 1fr 1fr 100px 1fr;
+        grid-template-rows: 1fr 1fr 100px 1fr;
+        grid-template-areas: "nav header header header"     "main main main main" "aside aside aside aside" "footer footer footer footer";
+  }
+  .presentation .object {
+    padding: 15px 2px 10px 0;
+    margin: 2px 2px 0 0;
+    border-radius: 10px 10px 0 0;
+  }
+  .presentation .team {
+    padding: 15px 0 15px 0;
+    margin: 2px 2px 2px 0;
+    border-radius: 0 0 10px 10px;
+  }
+  .presentation .liens-presentation {
+    margin: 0 2px 2px 0;
+    border-radius: 10px 10px 0 0;
+  }
+  /*Page event*/
+  .event {
+    -ms-grid-columns: 120px 50px 50px 80px;
+        grid-template-columns: 120px 50px 50px 80px;
+    -ms-grid-rows: 150px 100px 350px 120px 140px;
+        grid-template-rows: 150px 100px 350px 120px 140px;
+        grid-template-areas: "nav header header header" "main main main main" "main main main main" "aside aside aside aside" "footer footer footer footer";
+  }
+  .event .liens-event {
+    margin: 2px 0 1px 0;
+    opacity: 1;
+    border-radius: 10px 10px 0 0;
+  }
+  .event .footer {
+    margin: 1px 0 0 0;
+  }
+  .event .main-event {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .event .reunion {
+    width: 100%;
+    padding: 10px 0 10px 0;
+    margin: 2px 50px 2px 0;
+  }
+  .event .visite {
+    width: 100%;
+    padding: 10px 0 50px 0;
+    margin: 0 50px 0 0;
+    overflow: scroll;
+  }
+  .event tr {
+    font-size: 1.5rem;
+  }
+  .event caption {
+    font-size: 2.5rem;
+  }
+  /*Page multiple*/
+  .navli {
+    font-size: 2rem;
+  }
+  h4 {
+    font-size: 2.5rem;
+  }
   .arian {
     display: none;
   }
@@ -473,57 +504,48 @@ p {
     font-size: 7px;
     padding: 10px;
     height: 100%;
+    padding: 0 0 0 5px;
   }
   h1 {
     font-size: 3.5rem;
-    margin-left: 20px;
+    margin-left: 5px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-item-align: center;
-        align-self: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .img-fluid {
     width: 50px;
     height: 50px;
   }
-  .navindex {
-    margin: 0 40px 0 30px;
-  }
-  .lnavindex {
-    padding: 80px;
-  }
   .header {
     padding: 5px;
-    margin: 0 15px 0 0;
+    margin: 5px 2px 0 5px;
     border-radius: 0px 10px 0 0;
   }
   .lnav {
     text-align: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-line-pack: center;
-        align-content: center;
-    margin: 0 2px 0 0;
+    margin: 5px 5px 0 2px;
+    padding: 0 30px 0 22px;
+    border-radius: 10px 0 0 10px;
   }
   .img-liens {
     width: 40px;
     height: 40px;
     margin: 0 5px 0 5px;
   }
-  .object {
-    padding: 15px 2px 10px 0;
-    margin: 2px 15px 0 0;
-  }
   .team,
   .object,
+  .visite,
+  .reunion,
   .liens {
     border: 2px solid black;
-  }
-  .team {
-    padding: 15px 0 15px 0;
-    margin: 2px 15px 2px 0;
   }
   .logo-nav {
     display: none;
@@ -533,52 +555,14 @@ p {
     background: none;
     border: none;
   }
-  .lnavindex {
-    font-size: 2rem;
-  }
-  .liens {
-    margin: 5px 15px 5px 0;
-    opacity: 1;
-  }
-  .liens-presentation {
-    margin: 0 15px 2px 0;
-  }
-  .main-event {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .reunion {
-    width: 95%;
-    padding: 10px 0 10px 0;
-    margin: 2px 50px 2px 0;
-  }
-  .visite {
-    width: 95%;
-    padding: 10px 0 32px 0;
-    margin: 0 50px 0 0;
-    overflow: scroll;
-  }
   .footer {
     padding: 5px 0 5px 0;
-    margin: 0 15px 0 0;
-    font-size: 2rem;
+    margin: 0 2px 5px 0;
+    font-size: 3rem;
+    border-radius: 0 0 10px 10px;
   }
   .btn-success {
     font-size: 2rem;
-  }
-  tr {
-    font-size: 1.5rem;
-  }
-  h1 {
-    font-size: 2.5rem;
-  }
-  caption {
-    font-size: 2.5rem;
   }
   .teamli,
   p {
@@ -589,25 +573,53 @@ p {
 /*end*/
 /*responsive 321px a 550px*/
 @media screen and (min-width: 321px) and (max-width: 550px) {
-  .arian {
-    display: none;
+  /*Page index*/
+  .index {
+    -ms-grid-columns: 150px 100px 100px 150px;
+        grid-template-columns: 150px 100px 100px 150px;
+    -ms-grid-rows: 150px 200px 300px 100px 130px;
+        grid-template-rows: 150px 200px 300px 100px 130px;
+        grid-template-areas: "header header header header" ". nav nav ." ". nav nav ." ". nav nav ." "footer footer footer footer";
   }
-  .visite,
-  .reunion {
+  /*Page presentation*/
+  .presentation {
+    -ms-grid-columns: 0.2fr 1fr 1fr 1fr;
+        grid-template-columns: 0.2fr 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 0.7fr 1fr;
+        grid-template-rows: 1fr 1fr 0.7fr 1fr;
+        grid-template-areas: "nav header header header"     "main main main main" "aside aside aside aside" "footer footer footer footer";
+  }
+  /*Page event*/
+  .event {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    -ms-grid-rows: 0.33fr 0.1fr 1fr 0.3fr 0.3fr;
+        grid-template-rows: 0.33fr 0.1fr 1fr 0.3fr 0.3fr;
+        grid-template-areas: "nav header header header" "main main main main" "main main main main" "aside aside aside aside" "footer footer footer footer";
+  }
+  .event .visite, .event .reunion {
     width: 100%;
     border: 2px solid black;
   }
-  .reunion {
+  .event .reunion {
     padding: 0 10px 10px 5px;
     margin: 0;
   }
-  .visite {
+  .event .visite {
     padding: 5px 10px 15px 10px;
     margin: 2px 0 2px 0;
     overflow: scroll;
   }
-  html {
+  /*Page multiple*/
+  html,
+  body {
     font-size: 10px;
+    padding: 10px;
+    height: 100%;
+    padding: 0 0 0 5px;
+  }
+  .arian {
+    display: none;
   }
   .main-event {
     display: -webkit-box;
