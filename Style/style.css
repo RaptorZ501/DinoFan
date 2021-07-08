@@ -577,51 +577,66 @@ p {
   .index {
     -ms-grid-columns: 150px 100px 100px 150px;
         grid-template-columns: 150px 100px 100px 150px;
-    -ms-grid-rows: 150px 200px 300px 100px 130px;
-        grid-template-rows: 150px 200px 300px 100px 130px;
+    -ms-grid-rows: 150px 100px 400px 100px 130px;
+        grid-template-rows: 150px 100px 400px 100px 130px;
         grid-template-areas: "header header header header" ". nav nav ." ". nav nav ." ". nav nav ." "footer footer footer footer";
+  }
+  .index .lnavindex {
+    opacity: 1;
+    padding: 20px 120px 20px 120px;
+    font-size: 2rem;
+  }
+  .index .header {
+    border-radius: 10px;
+    margin: 0 20px 0 0;
+  }
+  .index .footer {
+    margin: 0 20px 5px 0;
   }
   /*Page presentation*/
   .presentation {
-    -ms-grid-columns: 0.2fr 1fr 1fr 1fr;
-        grid-template-columns: 0.2fr 1fr 1fr 1fr;
-    -ms-grid-rows: 1fr 1fr 0.7fr 1fr;
-        grid-template-rows: 1fr 1fr 0.7fr 1fr;
+    -ms-grid-columns: 170px 100px 100px 120px;
+        grid-template-columns: 170px 100px 100px 120px;
+    -ms-grid-rows: 1fr 1fr 100px 1fr;
+        grid-template-rows: 1fr 1fr 100px 1fr;
         grid-template-areas: "nav header header header"     "main main main main" "aside aside aside aside" "footer footer footer footer";
+  }
+  .presentation .team {
+    margin: 2px 10px 0 2px;
+    padding: 5px 0 5px 0;
+  }
+  .presentation .object {
+    padding: 15px 2px 50px 0;
+    margin: 2px 10px 2px 2px;
+  }
+  .presentation .header {
+    margin: 2px 10px 0 5px;
   }
   /*Page event*/
   .event {
-    -ms-grid-columns: 1fr 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    -ms-grid-rows: 0.33fr 0.1fr 1fr 0.3fr 0.3fr;
-        grid-template-rows: 0.33fr 0.1fr 1fr 0.3fr 0.3fr;
+    -ms-grid-columns: 170px 100px 100px 120px;
+        grid-template-columns: 170px 100px 100px 120px;
+    -ms-grid-rows: 150px 100px 400px 100px 150px;
+        grid-template-rows: 150px 100px 400px 100px 150px;
         grid-template-areas: "nav header header header" "main main main main" "main main main main" "aside aside aside aside" "footer footer footer footer";
   }
   .event .visite, .event .reunion {
     width: 100%;
-    border: 2px solid black;
+  }
+  .event .header {
+    margin: 2px 10px 2px 5px;
   }
   .event .reunion {
-    padding: 0 10px 10px 5px;
+    padding: 0 10px 0 5px;
     margin: 0;
+    height: 70%;
   }
   .event .visite {
     padding: 5px 10px 15px 10px;
-    margin: 2px 0 2px 0;
+    margin: 2px 0 1px 0;
     overflow: scroll;
   }
-  /*Page multiple*/
-  html,
-  body {
-    font-size: 10px;
-    padding: 10px;
-    height: 100%;
-    padding: 0 0 0 5px;
-  }
-  .arian {
-    display: none;
-  }
-  .main-event {
+  .event .main-event {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -631,18 +646,32 @@ p {
             flex-direction: column;
     padding: 0 10px 0 5px;
   }
+  .event .lnav {
+    margin: 2px 0 2px 0;
+  }
+  /*Page multiple*/
+  html,
+  body {
+    font-size: 10px;
+    padding: 5px 30px 5px 5px;
+    height: 100%;
+    width: 100%;
+  }
+  .lnav {
+    padding: 2px 35px 2px 30px;
+    font-size: 2rem;
+    border-radius: 10px 0 0 10px;
+  }
+  .arian {
+    display: none;
+  }
   .bg-image,
   .bg-body {
     background: none;
     border: none;
   }
   .liens {
-    margin: 2px 10px 2px 5px;
-    border: 2px solid black;
-  }
-  .lnavindex {
-    padding: 50%;
-    opacity: 1;
+    margin: 2px 10px 2px 2px;
   }
   .logo-nav {
     display: none;
@@ -652,41 +681,46 @@ p {
     height: 50px;
     margin: 0 5px 0 0;
   }
+  .reunion,
+  .visite,
+  .team,
+  .object,
+  .liens {
+    border: 2px solid black;
+  }
   .header {
     padding: 5px 15px 0 0;
-    margin: 2px 10px 2px 0;
     border-radius: 0 10px 10px 0;
   }
   h1 {
-    font-size: 2rem;
-    margin: 15px 10px 0 0;
+    font-size: 3rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  h2 {
+  h2,
+  p,
+  tr,
+  .btn-success {
     font-size: 1.5rem;
+  }
+  h4 {
+    font-size: 2rem;
   }
   .img-liens {
     width: 40px;
     height: 40px;
   }
-  p,
-  tr {
-    font-size: 1.5rem;
-  }
-  .btn-success {
-    font-size: 1.5rem;
-  }
-  .team {
-    margin: 2px 10px 0 5px;
-    padding: 5px 0 5px 0;
-  }
-  .object {
-    padding: 15px 2px 50px 0;
-    margin: 2px 10px 2px 5px;
-    border: 2px solid black;
-  }
   .footer {
     padding: 10px 0 0 0;
-    margin: 0 10px 10px 5px;
+    margin: 0 10px 10px 2px;
   }
 }
 
